@@ -2,17 +2,19 @@ import React from 'react'
 import {render} from 'react-dom'
 import '../public/normalize.css'
 import '../public/style.css'
+import { BrowserRouter, Match } from 'react-router'
+import Landing from './Landing'
+import Search from './Search'
 
 const App = React.createClass({
   render () {
     return (
-      <div className='app'>
-        <div className='landing' >
-          <h1>svideo</h1>
-          <input type='text' placeholder='Search' />
-          <a> or Browse All</a>
+      <BrowserRouter>
+        <div className='app'>
+          <Match exactly pattern='/' component={Landing} />
+          <Match exactly pattern='/search' component={Search} />
         </div>
-      </div>
+      </BrowserRouter>
     )
   }
 })
