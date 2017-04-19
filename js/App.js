@@ -1,6 +1,4 @@
 import React from 'react'
-import '../public/normalize.css'
-import '../public/style.css'
 import { Match } from 'react-router'
 import Landing from './Landing'
 import Search from './Search'
